@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LibreVPN - una red libre virtual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/force.css"/>
+
+    <style>
+        div#chart {
+          top: 0;
+          right: 0;
+          position: absolute;
+          min-width: 70%;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-unit">
+
+        <div id="chart" class="span10"></div>
+
+        <h1>Libre VPN</h1>
+        <p>Una red libre virtual.</p>
+
+      </div>
+
+    <div class="row">
+      <div class="span4">
+          <h3><i class="icon-cloud icon-large"></i>&nbsp;&nbsp;Esto no es una nube</h3>
+
+          <p>Corre en tu computadora y se conecta con otras iguales. Es
+             peer-to-peer, o mejor, friend-to-friend.</p>
+
+      </div>
+
+      <div class="span4">
+          <h3><i class="icon-beaker icon-large"></i>&nbsp;&nbsp;Experimental</h3>
+
+          <p>Funciona sobre Internet, pero no está bloqueada: <em>Podés
+          experimentar tranquilo sin necesidad de infraestructura
+          específica.</em></p>
+
+      </div>
+
+      <div class="span4">
+          <h3><i class="icon-group icon-large"></i>&nbsp;&nbsp;Autogestivo</h3>
+
+          <p>Levantás los servicios que quieras, incluso tu propio servidor de
+          correo.</p>
+
+      </div>
+
+    <div class="span12">
+      <section id="unirse">
+        <div class="page-header">
+        <h1>Cómo me uno</h1>
+        </div>
+
+        <p class="lead">LibreVPN es una red de pares, para unirse, primero hay
+        que <a href="http://listas.hackcoop.com.ar/listinfo/vpn">contactar</a> a otro
+        miembro.</p>
+
+        <h2>Obtener los programas de configuración</h2>
+
+        <p>Cada nodo participante en la red se identifica por un archivo que
+        contiene su nombre, dirección en la VPN, dirección de acceso público
+        (opcional) y su llave criptográfica.</p>
+
+        <p>Este proceso puede realizarse manualmente siguiendo la documentación
+        de Tinc (<code>man tinc.conf</code>), o usando nuestras herramientas de
+        configuración.</p>
+
+        <h3>Instalar Tinc</h3>
+
+        <p><code># apt-get install tinc</code>, en Debian GNU/Linux o similares, o</p>
+        <p><code># pacman -S tinc</code> en Parabola GNU/Linux-libre (también Arch).</p>
+
+        <div class="alert alert-info">
+          <p><strong>Nota:</strong> en las instrucciones, <code>#</code>
+          significa "correr como root" y <code>$</code> "correr como
+          usuario".</p>
+        </div>
+        
+        <h3>Herramienta de configuración</h3>
+
+        <p>Obtener el código con <code>$ git clone
+        git://git.hackcoop.com.ar/librevpn.git</code>.</p>
+
+        <p>Desde el directorio <code>librevpn</code>.</p>
+
+        <p><code>$ ./lvpn init -i $HOSTNAME</code></p>
+        
+        <p>Con este paso es suficiente para crear el nodo, en el directorio
+        <code>nodos/</code> se encuentran los archivos de configuración, que se
+        sincronizan en <code>/etc/tinc/lvpn</code> con la opción
+        <code>-i</code> o con <code># ./lvpn install $HOSTNAME</code> luego de
+        hacer otras modificaciones.</p>
+
+        <p>El siguiente paso es seleccionar los nodos a los que nos vamos a
+        conectar, mirando uno de <a
+        href="http://204.232.186.107/vpn.svg">los mapas</a> de LibreVPN o <a
+        href="http://hackcoop.com.ar:8338/?channels=lab">preguntándonos en
+        nuestro canal IRC</a>.
+
+        <p>Para agregar nodos a los que conectarse:</p>
+
+        <p><code>$ ./lvpn connectto $HOSTNAME ponape apolo<br/>
+        &gt; Copiando el archivo host de ponape<br/>
+        &gt; Copiando el archivo host de apolo<br/>
+        <br/>
+        # ./lvpn install $HOSTNAME</code></p>
+
+        <p>A continuación, tenemos que enviar la llave de nuestro nodo a los
+        nodos apolo y ponape.  Las llaves se guardan en el directorio
+        <code>hosts/</code>.  Por ahora, este paso se puede hacer por mail, <a
+        href="http://pastie.org">pastebin</a>, etc.</p>
+
+      </section>
+
+      <section id="funciona">
+        <div class="page-header">
+          <h1>Cómo funciona</h1>
+        </div>
+
+        <p class="lead">Usamos <a href="http://tinc-vpn.org">Tinc</a> para unir
+        los nodos de la red y <a href="http://avahi.org">Avahi</a> para
+        anunciar y descubrir recursos.</p>
+
+        <p>Tinc es una VPN que funciona como una red en malla, cualquier nodo
+        perteneciente a la red está capacitado para conectarse con los demás
+        sin la autorización de un nodo central o servidor.  Sólo necesita al
+        menos un "amigo" o enlace dentro de la red que lo reconozca, y este es
+        el punto de entrada al resto de la red.</p>
+
+        <p>Una vez funcionando, se comporta como una red normal, e incluso
+        servicios que antes eran locales, como las carpetas compartidas, el
+        chat local y otros, vuelven a estar disponibles.</p>
+
+      </section>
+
+    </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/d3.v2.js"></script>
+    <script type="text/javascript" src="assets/js/force.js"></script>
+  </body>
+</html>
