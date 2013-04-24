@@ -157,11 +157,10 @@
         similares) o <code>nss-mdns</code> (en Parabola y similares).  Luego
         hay que modificar el archivo <code>/etc/nsswitch.conf</code></p>
 
-        <p><code># Cambiar la línea
-        hosts: files dns
-        # Por
-        hosts: files mdns_minimal [NOTFOUND=return] dns mdns
-        </code></p>
+        <p><code># Cambiar la línea<br/>
+        hosts: files dns<br/>
+        # Por<br/>
+        hosts: files mdns_minimal [NOTFOUND=return] dns mdns </code></p>
 
       </section>
 
