@@ -88,8 +88,8 @@
         </div>
 
         <p class="lead">LibreVPN es una red de pares, para unirse, primero hay
-        que <a href="http://listas.hackcoop.com.ar/listinfo/vpn">contactar</a> a otro
-        miembro.</p>
+        que <a href="http://listas.hackcoop.com.ar/listinfo/vpn">contactar</a>
+        a otro miembro.</p>
 
         <h2>Obtener los programas de configuración</h2>
 
@@ -145,6 +145,23 @@
         nodos apolo y ponape.  Las llaves se guardan en el directorio
         <code>hosts/</code>.  Por ahora, este paso se puede hacer por mail, <a
         href="http://pastie.org">pastebin</a>, etc.</p>
+
+
+        <h3>Instalar Avahi</h3>
+        <p>Avahi suele estar instalado y configurado de fábrica en muchas
+        distribuciones GNU/Linux.  Para probarlo, hay que hacer <code>ping
+        $HOSTNAME.local</code>.</p>
+
+        <p>En caso de que no, hay que instalar los paquetes
+        <code>avahi-daemon</code> y <code>libnss-mdns</code> (en Debian y
+        similares) o <code>nss-mdns</code> (en Parabola y similares).  Luego
+        hay que modificar el archivo <code>/etc/nsswitch.conf</code></p>
+
+        <p><code># Cambiar la línea
+        hosts: files dns
+        # Por
+        hosts: files mdns_minimal [NOTFOUND=return] dns mdns
+        </code></p>
 
       </section>
 
