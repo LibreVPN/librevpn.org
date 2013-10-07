@@ -14,6 +14,17 @@ var svg = d3.select("#chart").append("svg")
 
 d3.json("assets/data/nodes.json", function(json) {
 
+// Calcular la cantidad de links de cada nodo
+// Ver node.attr("r")
+  var links = [];
+  json.links.forEach(function(l) {
+    if (typeof(links[l.target]) == "undefined") links[l.target] = 0;
+    if (typeof(links[l.source]) == "undefined") links[l.source] = 0;
+
+    links[l.target]++;
+    links[l.source]++;
+  });
+
   force
       .nodes(json.nodes)
       .links(json.links)
@@ -28,7 +39,7 @@ d3.json("assets/data/nodes.json", function(json) {
       .data(json.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 10)
+      .attr("r", function(d) { return links[d.index]; })
       .style("fill", function(d) { return color(d.weight); })
       .call(force.drag);
 
