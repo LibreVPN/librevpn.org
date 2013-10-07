@@ -28,7 +28,7 @@ d3.json("assets/data/nodes.json", function(json) {
       .data(json.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 5)
+      .attr("r", 10)
       .style("fill", function(d) { return color(d.weight); })
       .call(force.drag);
 
