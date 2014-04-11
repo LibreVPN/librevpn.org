@@ -1,4 +1,4 @@
-var width = 800,
+var width = 500,
     height = 200;
 
 var color = d3.scale.category20();
@@ -14,10 +14,27 @@ var svg = d3.select("#chart").append("svg")
 
 d3.json("assets/data/nodes.json", function(json) {
 
+// Calcular la cantidad de links de cada nodo
+// Ver node.attr("r")
+  var links = [];
+  json.links.forEach(function(l) {
+    if (typeof(links[l.target]) == "undefined") links[l.target] = 0;
+    if (typeof(links[l.source]) == "undefined") links[l.source] = 0;
+
+    links[l.target]++;
+    links[l.source]++;
+  });
+
   force
       .nodes(json.nodes)
       .links(json.links)
       .start();
+
+  var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
+    return d.name+' con '+links[d.index]/2+' enlaces';
+  });
+
+  svg.call(tip);
 
   var link = svg.selectAll("line.link")
       .data(json.links)
@@ -28,9 +45,11 @@ d3.json("assets/data/nodes.json", function(json) {
       .data(json.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 10)
+      .attr("r", function(d) { return links[d.index]; })
       .style("fill", function(d) { return color(d.weight); })
-      .call(force.drag);
+      .call(force.drag)
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide);
 
   node.append("title")
       .text(function(d) { return d.name; });

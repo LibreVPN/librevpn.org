@@ -11,55 +11,54 @@
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="assets/css/force.css"/>
-
-    <style>
-        div#chart {
-          top: 0;
-          right: 0;
-          position: absolute;
-          min-width: 70%;
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="assets/css/example-styles.css"/>
 
   </head>
   <body>
     <div class="container">
-      <div class="hero-unit">
+      <div class="jumbotron">
 
-        <div id="chart" class="span10"></div>
+        <div id="chart" class="pull-right"></div>
 
         <h1>Libre VPN</h1>
         <p>Una red libre virtual.</p>
 
+        <p><a class="btn btn-info" href="http://wiki.hackcoop.com.ar/Categoría:LibreVPN">Documentación</a>
+           <a class="btn btn-warning" href="http://wiki.hackcoop.com.ar/Categoría:LibreVPN/en">Also in English!</a>
+           <a class="btn btn-link" href="http://wiki.hackcoop.com.ar/LibreVPN:Crear una red nueva">Creá tu propia VPN</a></p>
+           <a class="btn btn-link" href="http://repo.hackcoop.com.ar/librevpn.org.git">Arreglá este sitio</a></p>
+
       </div>
 
     <div class="row">
-      <div class="span4">
+      <div class="col-4 col-sm-4 col-lg-4">
           <h3><i class="icon-cloud icon-large"></i>&nbsp;&nbsp;Esto no es una nube</h3>
 
-          <p>Corre en tu computadora y se conecta con otras iguales. Es
-             peer-to-peer, o mejor, friend-to-friend.</p>
+          <p>Corre en tu computadora y se conecta con otras iguales, en
+             una red peer-to-peer, o mejor, friend-to-friend.</p>
 
       </div>
 
-      <div class="span4">
+      <div class="col-4 col-sm-4 col-lg-4">
           <h3><i class="icon-beaker icon-large"></i>&nbsp;&nbsp;Experimental</h3>
 
           <p>Funciona sobre Internet, pero no está bloqueada: <em>Podés
-          experimentar tranquilo sin necesidad de infraestructura
+          experimentar tranquilx sin necesidad de infraestructura
           específica.</em></p>
 
       </div>
 
-      <div class="span4">
+      <div class="col-4 col-sm-4 col-lg-4">
           <h3><i class="icon-group icon-large"></i>&nbsp;&nbsp;Autogestivo</h3>
 
-          <p>Levantás los servicios que quieras, incluso tu propio servidor de
-          correo.</p>
+          <p>Levantás los servicios que quieras, incluso <a
+          href="http://wiki.hackcoop.com.ar/Correo_local">tu propio servidor de
+          correo</a>.</p>
 
       </div>
+    </div>
 
-    <div class="span12">
+    <div>
 
       <section id="funciona">
         <div class="page-header">
@@ -87,9 +86,9 @@
         <h1>Cómo me uno</h1>
         </div>
 
-        <p class="lead">LibreVPN es una red de pares, para unirse, primero hay
+        <p class="lead">LibreVPN es una red de pares, para unirse primero hay
         que <a href="http://listas.hackcoop.com.ar/listinfo/vpn">contactar</a>
-        a otro miembro.</p>
+        a otrx miembrx.</p>
 
         <h2>Obtener los programas de configuración</h2>
 
@@ -111,7 +110,7 @@
           significa "correr como root" y <code>$</code> "correr como
           usuario".</p>
         </div>
-        
+
         <h3 id="lvpn">Herramienta de configuración</h3>
 
         <p>Obtener el código con <code>$ git clone
@@ -120,7 +119,7 @@
         <p>Desde el directorio <code>librevpn</code>.</p>
 
         <p><code>$ ./lvpn init -i $HOSTNAME</code></p>
-        
+
         <p>Con este paso es suficiente para crear el nodo, en el directorio
         <code>nodos/</code> se encuentran los archivos de configuración, que se
         sincronizan en <code>/etc/tinc/lvpn</code> con la opción
@@ -129,8 +128,8 @@
 
         <p>El siguiente paso es seleccionar los nodos a los que nos vamos a
         conectar, mirando uno de <a
-        href="http://204.232.186.107/vpn.svg">los mapas</a> de LibreVPN o <a
-        href="http://hackcoop.com.ar:8338/?channels=lab">preguntándonos en
+        href="http://librevpn.org.ar/force.html">los mapas</a> de LibreVPN o <a
+        href="http://irc.hackcoop.com.ar/?channels=lab">preguntándonos en
         nuestro canal IRC</a>.
 
         <p>Para agregar nodos a los que conectarse:</p>
@@ -161,13 +160,19 @@
         Por<br/>
         <code>hosts: files mdns_minimal [NOTFOUND=return] dns mdns</code></p>
 
+        <div class="alert alert-info">
+          <p><strong>Nota:</strong> Las versiones más modernas de
+          <code>lvpn install</code> configuran automáticamente
+          <code>nss-mdns</code> si está instalado en el sistema.</p>
+        </div>
+
       </section>
 
     </div>
     </div>
-    </div>
 
-    <script type="text/javascript" src="assets/js/d3.v2.js"></script>
+    <script type="text/javascript" src="assets/js/d3.js"></script>
+    <script type="text/javascript" src="assets/js/d3-tip/index.js"></script>
     <script type="text/javascript" src="assets/js/force.js"></script>
   </body>
 </html>
