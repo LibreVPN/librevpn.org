@@ -30,6 +30,12 @@ d3.json("assets/data/nodes.json", function(json) {
       .links(json.links)
       .start();
 
+  var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
+    return d.name+' con '+links[d.index]/2+' enlaces';
+  });
+
+  svg.call(tip);
+
   var link = svg.selectAll("line.link")
       .data(json.links)
     .enter().append("line")
@@ -41,7 +47,9 @@ d3.json("assets/data/nodes.json", function(json) {
       .attr("class", "node")
       .attr("r", function(d) { return links[d.index]; })
       .style("fill", function(d) { return color(d.weight); })
-      .call(force.drag);
+      .call(force.drag)
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide);
 
   node.append("title")
       .text(function(d) { return d.name; });
