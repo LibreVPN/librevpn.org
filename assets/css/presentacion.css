@@ -1,0 +1,11 @@
+iframe.force {
+	border: 0;
+	background-color: none;
+	overflow: hidden;
+	height: 800px;
+	width: 800px;
+}
+
+figure img {
+	border: 0
+}
