@@ -44,6 +44,15 @@ Qué es
 * Y se puede conectar con los demás sin pasar por un servidor central
 * Pero si no hay conexión directa, se delega el tráfico
 
+## Una caja de herramientas para crear VPNs
+
+---
+
+`lvpn` es una serie de comandos para crear nodos, correr comandos
+personalizados en eventos de la red, auto asignar direcciones IP y
+rutas por defecto, etc.
+
+
 
 Cosas piolas
 ============
@@ -72,14 +81,6 @@ Cada nodo tiene una IPv6 en el rango `2001:1291:200:83ab::/64`
 Que cada nodo es un nodo de la Internet del futuro
 
 ---
-
-## Una caja de herramientas para crear VPNs
-
----
-
-`lvpn` es una serie de comandos para crear nodos, correr comandos
-personalizados en eventos de la red, auto asignar direcciones IP y
-rutas por defecto, etc.
 
 
 # Qué onda, cómo le hacen
