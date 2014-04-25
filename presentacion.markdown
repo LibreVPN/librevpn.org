@@ -9,6 +9,12 @@ Un proyecto de...
 
 ![](assets/img/LogoHacklab.svg)
 
+---
+
+## Bajo licencia AGPLv3
+
+![](assets/img/AGPLv3_Logo.svg)
+
 
 Cómo se ve
 ==========
