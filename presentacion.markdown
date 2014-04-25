@@ -144,8 +144,10 @@ Que cada nodo de LibreVPN es un nodo de la Internet del futuro
 
 ---
 
-Una red adentro de otra!! Primero por Internet4, luego por LibreVPN y
-luego por Internet6.
+## Una red adentro de otra!!
+
+Primero por Internet (IPv4),\
+luego por LibreVPN y finalmente por Internet (IPv6).
 
 Otras VPNs usan rangos privados: `fe80::`
 
