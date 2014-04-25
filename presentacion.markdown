@@ -36,7 +36,7 @@ no es
 
 ---
 
-Un túnel para proteger el tráfico
+## Un túnel para proteger el tráfico
 
 Para eso está RiseUp.net!  Pero es posible, si alguien te deja
 
@@ -114,6 +114,7 @@ Cosas piolas
 ---
 
 * El tráfico es cifrado
+* No fue afectada por Heartbleed
 * Ningún puerto bloqueado
 * Los nodos no son terminales
 * Funciona en Android y en OpenWrt
