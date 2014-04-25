@@ -130,6 +130,8 @@ Cada nodo tiene una IPv6 en el rango `2001:1291:200:83ab::/64`
 
 18.446.744.073.709.551.616 de nodos posibles
 
+<audio src="assets/audio/ipv6-64.oga" controls></audio>
+
 ---
 
 ## Qué quiere decir?
