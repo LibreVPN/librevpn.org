@@ -54,7 +54,8 @@ Y se puede conectar con otros sin pasar por un servidor central
 
 (aunque si no hay conexión directa, se delega el tráfico)
 
-## Una caja de herramientas para crear VPNs
+## Una caja de herramientas
+### para crear VPN<small>s</small>
 
 ---
 
