@@ -57,12 +57,44 @@ personalizados en eventos de la red, auto asignar direcciones IP y rutas
 por defecto, etc.
 
 
+why!
+====
+
+---
+
+Internet no funciona como una red de pares, algunos son servidores y la
+mayoría son clientes
+
+---
+
+Hay cosas que no funcionan en Internet gracias a las NAT: la mayoría de
+las máquinas no tienen una IP pública.
+
+---
+
+Aunque quisiéramos, los proveedores de Internet bloquean puertos o
+te cambian la IP
+
+(alguien probó tener un servidor de correo en casa?)
+
+---
+
+Hay segmentos de redes libres que no se ven entre sí
+
+---
+
+## Entonces
+
+Necesitamos una red que supere estos problemas, no tener que reinventar
+servicios que esquiven los problemas de la Internet actual.
+
 
 Cosas piolas
 ============
 
 ---
 
+* El tráfico es cifrado
 * Ningún puerto bloqueado
 * Los nodos no son terminales
 * Funciona en Android y en OpenWrt
@@ -204,6 +236,7 @@ https://github.com/fauno/owns
 
 ---
 
+* Enlazar más!
 * Cada nodo un nodo público (owns, nat-pmp)
 * Intercambio de llaves por Internet (usando tor?)
 * Rutear entre varias redes (otras LibreVPN o segmentos de red)
