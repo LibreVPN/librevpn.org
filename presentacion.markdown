@@ -274,6 +274,17 @@ https://github.com/fauno/owns
 
 # Listo
 
+---
+
+## En resumen
+
+* LibreVPN es una red cifrada, cooperativa y libre
+* Cada nodo es un par como cualquier otro
+* Soporta IPv6
+* Promueve los servicios cooperativos de pares
+
+---
+
 ## A galponear!
 
 ![](assets/img/Galponzin.png)
