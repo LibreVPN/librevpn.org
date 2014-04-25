@@ -31,8 +31,8 @@ Cómo se ve
 
 <iframe class="stretch force" src="force.html"></iframe>
 
-Qué no es
-=========
+no es
+=====
 
 ---
 
@@ -41,8 +41,8 @@ Un túnel para proteger el tráfico
 Para eso está RiseUp.net!  Pero es posible, si alguien te deja
 
 
-Qué es
-======
+es
+==
 
 ---
 
