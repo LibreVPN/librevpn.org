@@ -59,9 +59,10 @@ Y se puede conectar con otros sin pasar por un servidor central
 
 ---
 
-`lvpn` es una serie de herramientas para crear nodos, correr comandos
-personalizados en eventos de la red, auto asignar direcciones IP y rutas
-por defecto, etc.
+`lvpn` es una serie de herramientas\
+para crear nodos,\
+correr comandos personalizados en eventos de la red,\
+auto asignar direcciones IP y rutas por defecto, etc.
 
 
 why!
@@ -73,18 +74,18 @@ why!
 
 ---
 
-Internet no funciona como una red de pares, algunos son servidores y la
-mayoría son clientes
+Internet no funciona como una red de pares,\
+sino que algunos son servidores y la mayoría son clientes
 
 ---
 
-Hay cosas que no funcionan en Internet gracias a las NAT: la mayoría de
-las máquinas no tienen una IP pública.
+Las NATs impiden que Internet sea P2P:\
+porque la mayoría de las máquinas no tienen una IP pública
 
 ---
 
-Aunque quisiéramos, los proveedores de Internet bloquean puertos o
-te cambian la IP
+Aunque quisiéramos,\
+los proveedores de Internet bloquean puertos o te cambian la IP
 
 (alguien probó tener un servidor de correo en casa?)
 
