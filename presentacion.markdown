@@ -62,6 +62,10 @@ why!
 
 ---
 
+![](assets/img/annoyed-y-u-no.svg)
+
+---
+
 Internet no funciona como una red de pares, algunos son servidores y la
 mayoría son clientes
 
@@ -81,12 +85,19 @@ te cambian la IP
 
 Hay segmentos de redes libres que no se ven entre sí
 
+(no te respondió el ping!)
+
 ---
 
 ## Entonces
 
 Necesitamos una red que supere estos problemas, no tener que reinventar
 servicios que esquiven los problemas de la Internet actual.
+
+
+## En realidad
+
+Nos gusta jugar con el grafo (miren cómo se mueve!)
 
 
 Cosas piolas
@@ -199,7 +210,7 @@ http://wiki.hackcoop.com.ar/Correo\_distribuido
 
 ---
 
-![](assets/img/800px-Correo_distribuido_vectorizado.svg.png)
+![](assets/img/Correo_distribuido_vectorizado.svg)
 
 ---
 
@@ -230,26 +241,36 @@ https://github.com/fauno/owns
 
 ## Create un nodo!
 
+(ya viste cómo)
+
 ---
 
 ## Cosas para hacer
 
+(o terminar)
+
 ---
 
-* Enlazar más!
+* Enlazar más! (al menos tres enlaces por nodo)
 * Cada nodo un nodo público (owns, nat-pmp)
 * Intercambio de llaves por Internet (usando tor?)
-* Rutear entre varias redes (otras LibreVPN o segmentos de red)
-* Convertir cada nodo en un router de su red
+* Rutear entre varias redes (otras vpns o redes libres)
+* Convertir cada nodo en un router de su red (radvd)
 * Probar protocolos de ruteo dinámico más avanzado (babeld)
 * Una GUI?
 
 
 # Listo
 
+## A galponear!
+
+![](assets/img/Galponzin.png)
+
+http://wiki.hackcoop.com.ar/Galponeo
+
 ---
 
-### librevpn.org.ar
+### librevpn.org.ar<br /><small>/presentacion.html</small>
 
 **Lista**
 :   vpn@hackcoop.com.ar
@@ -260,4 +281,5 @@ https://github.com/fauno/owns
 
 **Licencia de Producción de Pares**
 :   ![](assets/img/nc.png)
+:   Esta presentación se libera bajo la PPL
 :   http://endefensadelsl.org/ppl\_deed\_es.html

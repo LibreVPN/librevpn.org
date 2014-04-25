@@ -4,7 +4,7 @@ iframe.force {
 	overflow: hidden;
 }
 
-.reveal section figure img {
+.reveal section img {
 	border: 0;
   box-shadow: none
 }
