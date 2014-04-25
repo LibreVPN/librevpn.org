@@ -138,7 +138,7 @@ Cada nodo tiene una IPv6 en el rango `2001:1291:200:83ab::/64`
 
 ---
 
-Que cada nodo es un nodo de la Internet del futuro
+Que cada nodo de LibreVPN es un nodo de la Internet del futuro
 
 ![](assets/img/logo-top.png)
 
