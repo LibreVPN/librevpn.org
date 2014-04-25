@@ -5,7 +5,9 @@ if test $# -eq 0 ; then
   exit 0
 fi
 
-pandoc --standalone --css=assets/css/${1%.*}.css \
+pandoc --standalone \
+       --css=reveal.js/css/theme/solarized.css \
+       --css=assets/css/${1%.*}.css \
        --to revealjs \
        --output ${1%.*}.html \
        $1

@@ -2,10 +2,15 @@ iframe.force {
 	border: 0;
 	background-color: none;
 	overflow: hidden;
-	height: 800px;
-	width: 800px;
 }
 
-figure img {
-	border: 0
+.reveal section figure img {
+	border: 0;
+  box-shadow: none
+}
+
+.reveal pre {
+  background-color: #657B83;
+  color: #FDF6E3;
+  padding: 10px;
 }

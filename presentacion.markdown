@@ -15,7 +15,7 @@ Cómo se ve
 
 ---
 
-<iframe class="force" src="force_falso.html"></iframe>
+<iframe class="stretch force" src="force_falso.html"></iframe>
 
 ---
 
@@ -23,14 +23,16 @@ Cómo se ve
 
 ---
 
-<iframe class="force" src="force.html"></iframe>
+<iframe class="stretch force" src="force.html"></iframe>
 
 Qué no es
 =========
 
 ---
 
-Un túnel para anonimizar el tráfico (a menos que alguien te deje)
+Un túnel para proteger el tráfico
+
+Para eso está RiseUp.net!  Pero es posible, si alguien te deja
 
 
 Qué es
@@ -40,17 +42,19 @@ Qué es
 
 ## Una red en malla
 
-* Cada nodo es cliente y servidor a la vez
-* Y se puede conectar con los demás sin pasar por un servidor central
-* Pero si no hay conexión directa, se delega el tráfico
+Cada nodo es cliente y servidor a la vez
+
+Y se puede conectar con otros sin pasar por un servidor central
+
+(aunque si no hay conexión directa, se delega el tráfico)
 
 ## Una caja de herramientas para crear VPNs
 
 ---
 
-`lvpn` es una serie de comandos para crear nodos, correr comandos
-personalizados en eventos de la red, auto asignar direcciones IP y
-rutas por defecto, etc.
+`lvpn` es una serie de herramientas para crear nodos, correr comandos
+personalizados en eventos de la red, auto asignar direcciones IP y rutas
+por defecto, etc.
 
 
 
@@ -61,7 +65,8 @@ Cosas piolas
 
 * Ningún puerto bloqueado
 * Los nodos no son terminales
-* Funciona en Android
+* Funciona en Android y en OpenWrt
+* Multicast funciona!
 * IPv6 nativo!
 
 ---
@@ -72,6 +77,8 @@ Cosas piolas
 
 Cada nodo tiene una IPv6 en el rango `2001:1291:200:83ab::/64`
 
+18.446.744.073.709.551.616 de nodos posibles
+
 ---
 
 ## Qué quiere decir?
@@ -80,7 +87,14 @@ Cada nodo tiene una IPv6 en el rango `2001:1291:200:83ab::/64`
 
 Que cada nodo es un nodo de la Internet del futuro
 
+![](http://www.worldipv6launch.org/wp-content/themes/ipv6/img/logo-top.png)
+
 ---
+
+Una red adentro de otra!! Primero por Internet4, luego por LibreVPN y
+luego por Internet6.
+
+Otras VPNs usan rangos privados: `fe80::`
 
 
 # Qué onda, cómo le hacen
@@ -121,18 +135,35 @@ Todo esto dentro de una red local
 
 ---
 
-Aunque cualquier servicio que funcione en una LAN funciona en
-LibreVPN...
+Cualquier servicio que funcione en una LAN funciona en LibreVPN...
 
 ## Chat sin servidores
+
+Creá una cuenta Bonjour en Pidgin o Empathy
 
 ---
 
 ## Red IRC
 
+irc.hackcoop.com.ar también es... 192.168.9.3
+
+o [2001:1291:200:83ab:249a:2ef4:9cad:1d9e]
+
+o **naven.local**
+
+o _exodica.local_ (y sus IPs)
+
+---
+
+## Directorios compartidos
+
+FTP, SMB, AFP, BitTorrent, GlusterFS...
+
 ---
 
 ## Correo distribuido
+
+http://wiki.hackcoop.com.ar/Correo\_distribuido
 
 ---
 
@@ -142,11 +173,23 @@ LibreVPN...
 
 ## Correo local
 
----
-
-## Carpetas compartidas
+http://wiki.hackcoop.com.ar/Correo\_local
 
 ---
+
+## Y más!
+
+---
+
+## OWNS
+
+DNS distribuido
+
+https://github.com/fauno/owns
+
+---
+
+![](https://raw.githubusercontent.com/fauno/owns/master/owns.png)
 
 
 # Quiero participar!
@@ -161,11 +204,12 @@ LibreVPN...
 
 ---
 
-* Cada nodo un nodo público
+* Cada nodo un nodo público (owns, nat-pmp)
 * Intercambio de llaves por Internet (usando tor?)
 * Rutear entre varias redes (otras LibreVPN o segmentos de red)
 * Convertir cada nodo en un router de su red
-* Probar protocolos de ruteo dinámica más avanzado (babeld)
+* Probar protocolos de ruteo dinámico más avanzado (babeld)
+* Una GUI?
 
 
 # Listo
@@ -180,3 +224,7 @@ LibreVPN...
 **fauno**
 :   fauno@endefensadelsl.org
 :   0x456032D717A4CD9C
+
+**Licencia de Producción de Pares**
+:   ![](http://endefensadelsl.org/images/nc.png)
+:   http://endefensadelsl.org/ppl\_deed\_es.html
