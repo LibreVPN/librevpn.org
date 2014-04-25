@@ -7,7 +7,7 @@ Un proyecto de...
 
 ---
 
-![](http://wiki.hackcoop.com.ar/images/9/9d/LogoHacklab.svg)
+![](assets/img/LogoHacklab.svg)
 
 
 Cómo se ve
@@ -87,7 +87,7 @@ Cada nodo tiene una IPv6 en el rango `2001:1291:200:83ab::/64`
 
 Que cada nodo es un nodo de la Internet del futuro
 
-![](http://www.worldipv6launch.org/wp-content/themes/ipv6/img/logo-top.png)
+![](assets/img/logo-top.png)
 
 ---
 
@@ -167,7 +167,7 @@ http://wiki.hackcoop.com.ar/Correo\_distribuido
 
 ---
 
-![](http://wiki.hackcoop.com.ar/images/thumb/6/6d/Correo_distribuido_vectorizado.svg/800px-Correo_distribuido_vectorizado.svg.png)
+![](assets/img/800px-Correo_distribuido_vectorizado.svg.png)
 
 ---
 
@@ -189,7 +189,7 @@ https://github.com/fauno/owns
 
 ---
 
-![](https://raw.githubusercontent.com/fauno/owns/master/owns.png)
+![](assets/img/owns.svg)
 
 
 # Quiero participar!
@@ -226,5 +226,5 @@ https://github.com/fauno/owns
 :   0x456032D717A4CD9C
 
 **Licencia de Producción de Pares**
-:   ![](http://endefensadelsl.org/images/nc.png)
+:   ![](assets/img/nc.png)
 :   http://endefensadelsl.org/ppl\_deed\_es.html
