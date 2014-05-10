@@ -275,6 +275,12 @@ https://github.com/fauno/owns
 
 # Listo
 
+## A galponear!
+
+![](assets/img/Galponzin.png)
+
+http://wiki.hackcoop.com.ar/Galponeo
+
 ---
 
 ## En resumen
