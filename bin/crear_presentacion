@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if test $# -eq 0 ; then
+  echo "pasame el archivo con la presentacion y te daré un archivo.html"
+  exit 0
+fi
+
+pandoc --standalone \
+       --css=reveal.js/css/theme/solarized.css \
+       --css=assets/css/${1%.*}.css \
+       --to revealjs \
+       --output ${1%.*}.html \
+       $1

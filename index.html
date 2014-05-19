@@ -23,10 +23,24 @@
         <h1>Libre VPN</h1>
         <p>Una red libre virtual.</p>
 
-        <p><a class="btn btn-info" href="http://wiki.hackcoop.com.ar/Categoría:LibreVPN">Documentación</a>
-           <a class="btn btn-warning" href="http://wiki.hackcoop.com.ar/Categoría:LibreVPN/en">Also in English!</a>
-           <a class="btn btn-link" href="http://wiki.hackcoop.com.ar/LibreVPN:Crear una red nueva">Creá tu propia VPN</a></p>
-           <a class="btn btn-link" href="http://repo.hackcoop.com.ar/librevpn.org.git">Arreglá este sitio</a></p>
+        <div class="btn-group">
+
+          <a class="btn btn-success"
+             href="presentacion.html">Presentación</a>
+
+          <a class="btn btn-primary"
+             href="http://wiki.hackcoop.com.ar/Categoría:LibreVPN">Documentación</a>
+
+          <a class="btn btn-info"
+             href="http://wiki.hackcoop.com.ar/Categoría:LibreVPN/en">Also in English!</a>
+
+          <a class="btn btn-warning"
+             href="http://wiki.hackcoop.com.ar/LibreVPN:Crear una red nueva">Creá tu propia VPN</a>
+
+          <a class="btn btn-danger"
+             href="http://repo.hackcoop.com.ar/librevpn.org.git">Arreglá este sitio</a>
+
+        </div>
 
       </div>
 
@@ -174,5 +188,8 @@
     <script type="text/javascript" src="assets/js/d3.js"></script>
     <script type="text/javascript" src="assets/js/d3-tip/index.js"></script>
     <script type="text/javascript" src="assets/js/force.js"></script>
+    <script type="text/javascript">
+      use_the_force('assets/data/nodes.json', 500, 200);
+    </script>
   </body>
 </html>

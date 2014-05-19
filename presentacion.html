@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Una red libre virtual" />
+  <title>LibreVPN</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/solarized.css"/>
+    <link rel="stylesheet" href="assets/css/presentacion.css"/>
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">LibreVPN</h1>
+    <h2 class="author">Una red libre virtual</h2>
+    <h3 class="date">librevpn.org.ar</h3>
+</section>
+
+<section><section id="un-proyecto-de..." class="titleslide slide level1"><h1>Un proyecto de...</h1></section><section class="slide level2">
+
+<figure>
+<img src="assets/img/LogoHacklab.svg" />
+</figure>
+</section><section id="bajo-licencia-agplv3" class="slide level2">
+<h1>Bajo licencia AGPLv3</h1>
+<figure>
+<img src="assets/img/AGPLv3_Logo.svg" />
+</figure>
+</section></section>
+<section><section id="cómo-se-ve" class="titleslide slide level1"><h1>Cómo se ve</h1></section><section class="slide level2">
+
+<iframe class="stretch force" src="force_falso.html"></iframe>
+
+</section><section id="en-realidad-ahora-mismo-se-ve-así" class="slide level2">
+<h1>En realidad ahora mismo se ve así</h1>
+</section><section class="slide level2">
+
+<iframe class="stretch force" src="force.html"></iframe>
+
+</section></section>
+<section><section id="no-es" class="titleslide slide level1"><h1>no es</h1></section><section id="un-túnel-para-proteger-el-tráfico" class="slide level2">
+<h1>Un túnel para proteger el tráfico</h1>
+<p>Para eso está RiseUp.net! Pero es posible, si alguien te deja</p>
+</section></section>
+<section><section id="es" class="titleslide slide level1"><h1>es</h1></section><section id="una-red-en-malla" class="slide level2">
+<h1>Una red en malla</h1>
+<p>Cada nodo es cliente y servidor a la vez</p>
+<p>Y se puede conectar con otros sin pasar por un servidor central</p>
+<p>(aunque si no hay conexión directa, se delega el tráfico)</p>
+</section><section id="una-caja-de-herramientas" class="slide level2">
+<h1>Una caja de herramientas</h1>
+<h3 id="para-crear-vpns">para crear VPN<small>s</small></h3>
+</section><section class="slide level2">
+
+<p><code>lvpn</code> es una serie de herramientas<br />para crear nodos,<br />correr comandos personalizados en eventos de la red,<br />auto asignar direcciones IP y rutas por defecto, etc.</p>
+</section></section>
+<section><section id="why" class="titleslide slide level1"><h1>why!</h1></section><section class="slide level2">
+
+<figure>
+<img src="assets/img/annoyed-y-u-no.svg" />
+</figure>
+</section><section class="slide level2">
+
+<p>Internet no funciona como una red de pares,<br />sino que algunos son servidores y la mayoría son clientes</p>
+</section><section class="slide level2">
+
+<p>Las NATs impiden que Internet sea P2P:<br />porque la mayoría de las máquinas no tienen una IP pública</p>
+</section><section class="slide level2">
+
+<p>Aunque quisiéramos,<br />los proveedores de Internet bloquean puertos o te cambian la IP</p>
+<p>(alguien probó tener un servidor de correo en casa?)</p>
+</section><section class="slide level2">
+
+<p>Hay segmentos de redes libres que no se ven entre sí</p>
+<p>(no te respondió el ping!)</p>
+</section><section id="entonces" class="slide level2">
+<h1>Entonces</h1>
+<p>Necesitamos una red que supere estos problemas, no tener que reinventar servicios que esquiven los problemas de la Internet actual.</p>
+</section><section id="en-realidad" class="slide level2">
+<h1>En realidad</h1>
+<p>Nos gusta jugar con el grafo (miren cómo se mueve!)</p>
+</section></section>
+<section><section id="cosas-piolas" class="titleslide slide level1"><h1>Cosas piolas</h1></section><section class="slide level2">
+
+<ul>
+<li>El tráfico es cifrado</li>
+<li>No fue afectada por Heartbleed</li>
+<li>Ningún puerto bloqueado</li>
+<li>Los nodos no son terminales</li>
+<li>Funciona en Android y en OpenWrt</li>
+<li>Multicast funciona!</li>
+<li>IPv6 nativo!</li>
+</ul>
+</section><section id="ipv6-nativo" class="slide level2">
+<h1>IPv6 nativo!</h1>
+</section><section class="slide level2">
+
+<p>Cada nodo tiene una IPv6 en el rango <code>2001:1291:200:83ab::/64</code></p>
+<p>18.446.744.073.709.551.616 de nodos posibles</p>
+<p><audio src="assets/audio/ipv6-64.oga" controls></audio></p>
+</section><section id="qué-quiere-decir" class="slide level2">
+<h1>Qué quiere decir?</h1>
+</section><section class="slide level2">
+
+<p>Que cada nodo de LibreVPN es un nodo de la Internet del futuro</p>
+<figure>
+<img src="assets/img/logo-top.png" />
+</figure>
+</section><section id="una-red-adentro-de-otra" class="slide level2">
+<h1>Una red adentro de otra!!</h1>
+<p>Primero por Internet (IPv4),<br />luego por LibreVPN y finalmente por Internet (IPv6).</p>
+<p>Otras VPNs usan rangos privados: <code>fe80::</code></p>
+</section></section>
+<section><section id="qué-onda-cómo-le-hacen" class="titleslide slide level1"><h1>Qué onda, cómo le hacen</h1></section><section class="slide level2">
+
+<p>La red se levanta con <strong>tinc</strong>, usamos <strong>avahi</strong> para descubrimiento de servicios y mDNS y <strong>lvpn</strong> para configurar.</p>
+</section><section id="crear-un-nodo" class="slide level2">
+<h1>Crear un nodo</h1>
+</section><section class="slide level2">
+
+<p>En una máquina</p>
+<pre><code>lvpn init -i un_nodo
+tincd -n lvpn
+lvpn announce</code></pre>
+</section><section class="slide level2">
+
+<p>En otra</p>
+<pre><code>lvpn init -i otro_nodo
+tincd -n lvpn
+lvpn discover
+
+ping un_nodo.local
+ping6 un_nodo.local</code></pre>
+</section><section class="slide level2">
+
+<p>Todo esto dentro de una red local</p>
+</section></section>
+<section><section id="cosas-copadas-para-hacer" class="titleslide slide level1"><h1>Cosas copadas para hacer</h1></section><section class="slide level2">
+
+<p>Cualquier servicio que funcione en una LAN funciona en LibreVPN...</p>
+</section><section id="chat-sin-servidores" class="slide level2">
+<h1>Chat sin servidores</h1>
+<p>Creá una cuenta Bonjour en Pidgin o Empathy</p>
+</section><section id="red-irc" class="slide level2">
+<h1>Red IRC</h1>
+<p>irc.hackcoop.com.ar también es... 192.168.9.3</p>
+<p>o [2001:1291:200:83ab:249a:2ef4:9cad:1d9e]</p>
+<p>o <strong>naven.local</strong></p>
+<p>o <em>exodica.local</em> (y sus IPs)</p>
+</section><section id="directorios-compartidos" class="slide level2">
+<h1>Directorios compartidos</h1>
+<p>FTP, SMB, AFP, BitTorrent, GlusterFS...</p>
+</section><section id="correo-distribuido" class="slide level2">
+<h1>Correo distribuido</h1>
+<p>http://wiki.hackcoop.com.ar/Correo_distribuido</p>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/img/Correo_distribuido_vectorizado.svg" />
+</figure>
+</section><section id="correo-local" class="slide level2">
+<h1>Correo local</h1>
+<p>http://wiki.hackcoop.com.ar/Correo_local</p>
+</section><section id="y-más" class="slide level2">
+<h1>Y más!</h1>
+</section><section id="owns" class="slide level2">
+<h1>OWNS</h1>
+<p>DNS distribuido</p>
+<p>https://github.com/fauno/owns</p>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/img/owns.svg" />
+</figure>
+</section></section>
+<section><section id="quiero-participar" class="titleslide slide level1"><h1>Quiero participar!</h1></section><section id="create-un-nodo" class="slide level2">
+<h1>Create un nodo!</h1>
+<p>(ya viste cómo)</p>
+</section><section id="cosas-para-hacer" class="slide level2">
+<h1>Cosas para hacer</h1>
+<p>(o terminar)</p>
+</section><section class="slide level2">
+
+<ul>
+<li>Enlazar más! (al menos tres enlaces por nodo)</li>
+<li>Cada nodo un nodo público (owns, nat-pmp)</li>
+<li>Intercambio de llaves por Internet (usando tor?)</li>
+<li>Rutear entre varias redes (otras vpns o redes libres)</li>
+<li>Convertir cada nodo en un router de su red (radvd)</li>
+<li>Probar protocolos de ruteo dinámico más avanzado (babeld)</li>
+<li>Una GUI?</li>
+</ul>
+</section></section>
+<section><section id="listo" class="titleslide slide level1"><h1>Listo</h1></section><section id="a-galponear" class="slide level2">
+<h1>A galponear!</h1>
+<figure>
+<img src="assets/img/Galponzin.png" />
+</figure>
+<p>http://wiki.hackcoop.com.ar/Galponeo</p>
+</section><section id="en-resumen" class="slide level2">
+<h1>En resumen</h1>
+<ul>
+<li>LibreVPN es una red cifrada, cooperativa y libre</li>
+<li>Cada nodo es un par como cualquier otro</li>
+<li>Soporta IPv6</li>
+<li>Promueve los servicios cooperativos de pares</li>
+</ul>
+</section><section id="a-galponear-1" class="slide level2">
+<h1>A galponear!</h1>
+<figure>
+<img src="assets/img/Galponzin.png" />
+</figure>
+<p>http://wiki.hackcoop.com.ar/Galponeo</p>
+</section><section class="slide level2">
+
+<h3 id="librevpn.org.arpresentacion.html">librevpn.org.ar<br /><small>/presentacion.html</small></h3>
+<dl>
+<dt><strong>Lista</strong></dt>
+<dd><p>vpn@hackcoop.com.ar</p>
+</dd>
+<dt><strong>fauno</strong></dt>
+<dd>fauno@endefensadelsl.org
+</dd>
+<dd><p>0x456032D717A4CD9C</p>
+</dd>
+<dt><strong>Licencia de Producción de Pares</strong></dt>
+<dd><img src="assets/img/nc.png" />
+</dd>
+<dd>Esta presentación se libera bajo la PPL
+</dd>
+<dd><p>http://endefensadelsl.org/ppl_deed_es.html</p>
+</dd>
+</dl>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
